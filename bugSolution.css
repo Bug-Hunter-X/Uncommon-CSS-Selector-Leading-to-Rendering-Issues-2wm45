@@ -1,0 +1,12 @@
+Instead of using a complex selector, break it down into multiple simpler selectors to target the elements more clearly. For example, replace `a[href*="example"]::before:hover { content: "Hello"; }` with:
+
+```css
+a[href*="example"]::before {
+  content: "Hello";
+}
+a[href*="example"]::before:hover {
+  /* Add any hover-specific styles here */
+  color: blue;
+}
+```
+This approach improves readability, maintainability, and browser compatibility.
